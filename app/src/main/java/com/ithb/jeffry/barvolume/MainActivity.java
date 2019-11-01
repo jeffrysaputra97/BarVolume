@@ -29,8 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnCalculate.setOnClickListener(this);
 
         if (savedInstanceState != null){
-            String hasil = savedInstanceState.getString(STATE_HASIL);
-            tvResult.setText(hasil);
+            String result = savedInstanceState.getString(STATE_HASIL);
+            tvResult.setText(result);
         }
     }
 
@@ -95,8 +95,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
-        outState.putString(STATE_HASIL, tvResult.getText().toString());
         super.onSaveInstanceState(outState);
+        outState.putString(STATE_HASIL, tvResult.getText().toString());
     }
 
 }
